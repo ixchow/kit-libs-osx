@@ -114,8 +114,8 @@ def build_glm():
 
 
 def build_sdl():
-	sdl_file = 'SDL2-2.0.5.tar.gz'
-	sdl_dir = 'SDL2-2.0.5'
+	sdl_file = 'SDL2-2.0.7.tar.gz'
+	sdl_dir = 'SDL2-2.0.7'
 	sdl_out = 'SDL2'
 
 	print("Deleting SDL...")
@@ -147,6 +147,7 @@ def build_sdl():
 		'--disable-video-directfb',
 		'--disable-video-dummy',
 		'--enable-video-opengl',
+		'--disable-video-vulkan',
 		'--enable-video-opengles',
 		'--disable-input-tslib',
 		'--enable-pthreads',
@@ -176,7 +177,7 @@ def build_sdl():
 		f.write("".join(out))
 
 
-build_glm()
-build_zlib()
-build_libpng()
+#build_glm()
+#build_zlib()
+#build_libpng()
 build_sdl()
